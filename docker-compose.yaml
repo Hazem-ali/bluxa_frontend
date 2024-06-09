@@ -1,0 +1,12 @@
+version: '3'
+services:
+  frontend:
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./src:/app/src
+      - ./package.json:/app/package.json
+      - ./tailwind.config.js:/app/tailwind.config.js
+    ports:
+      - 3000:3000
