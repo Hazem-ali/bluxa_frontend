@@ -1,7 +1,12 @@
-import React from "react";
+import React, { us, useEffect } from "react";
+import Route from "react-router-dom";
 import "../../styles/global/input.css";
 import "../../styles/global/button.css";
+import { useNavigate } from "react-router-dom";
+
 const Register = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mx-4 ">
       <h1 className="sm:col-span-2 text-center drop-shadow-md text-white font-bold text-xl">
@@ -49,7 +54,12 @@ const Register = () => {
         placeholder="Confirm Password"
         className="input"
       />
-      <button className="btn btn-primary w-3/12 justify-self-center sm:col-span-2">
+      <button
+        className="btn btn-primary w-3/12 justify-self-center sm:col-span-2"
+        onClick={() => {
+          navigate("/login", {state : {name:"hazem ali"}});
+        }}
+      >
         Register
       </button>
     </div>

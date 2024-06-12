@@ -9,4 +9,4 @@ services:
       - ./package.json:/app/package.json
       - ./tailwind.config.js:/app/tailwind.config.js
     ports:
-      - 3000:3000
+      - 1234:3000
