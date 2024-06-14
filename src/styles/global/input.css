@@ -1,5 +1,5 @@
 .input {
-  @apply sm:w-64 min-w-32 w-64 rounded-xl px-3 py-1  text-black border-2 animated-input;
+  @apply sm:w-64 min-w-24 w-64 rounded-xl px-3 py-1 text-black border-2 animated-input;
 }
 
 .animated-input {

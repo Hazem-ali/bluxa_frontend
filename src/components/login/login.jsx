@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../../styles/global/input.css'
 import '../../styles/global/button.css'
-import {useLocation} from 'react-router-dom'
+import {useLocation} from 'react-router-dom';
 const Login = () => {
   const location = useLocation();
   useEffect(() => {
@@ -11,7 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState();
 
   return (
-    <div className="grid grid-cols-1 gap-4 mx-4 ">
+    <div className="grid grid-cols-1 gap-4 mx-4 justify-items-center  ">
       <input
         type="email"
         name="login-email"
@@ -32,7 +32,7 @@ const Login = () => {
           setPassword(event.target.value)
         }}
       />
-      <button className="btn btn-primary w-3/12 justify-self-center" onClick={() => {
+      <button className="btn bg-primary w-3/12 " onClick={() => {
         console.log(email);
         console.log(password);
       }}>

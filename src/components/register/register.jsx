@@ -8,7 +8,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mx-4 ">
+    <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 mx-4 justify-items-center">
       <h1 className="sm:col-span-2 text-center drop-shadow-md text-white font-bold text-xl">
         Register easily
       </h1>
@@ -55,7 +55,7 @@ const Register = () => {
         className="input"
       />
       <button
-        className="btn btn-primary w-3/12 justify-self-center sm:col-span-2"
+        className="btn bg-primary w-3/12 sm:col-span-2 "
         onClick={() => {
           navigate("/login", {state : {name:"hazem ali"}});
         }}
