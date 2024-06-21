@@ -5,9 +5,9 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          bgPrimary: '#102C57',  // Example color for bgPrimary
+          bgPrimary: '#013687',  // Example color for bgPrimary
           textPrimary: '#FFFFFF', // Example color for textPrimary
-          bgSecondary: '#4A90E2', // Example color for bgSecondary
+          bgSecondary: '#97ccff', // Example color for bgSecondary
           textSecondary: '#000000', // Example color for textSecondary
         },
       },
