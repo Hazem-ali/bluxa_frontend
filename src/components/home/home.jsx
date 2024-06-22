@@ -1,10 +1,18 @@
 import React from "react";
 import "./home.css";
-import ImageCard from "../card/imageCard";
-import milkImg from "../../images/milk.jpg";
-import electronicsImg from "../../images/electronics.jpg";
-import laptopImg from "../../images/laptop.jpg";
+import ImageCard from "../imageCard/imageCard";
+import ProductCard from "../productCard/productCard";
+
+import saleImg from "../../images/sale.jpg";
+import mobileImg from "../../images/mobile.jpg";
+import sweetsImg from "../../images/sweets.jpg";
+import marketImg from "../../images/market.jpg";
+import juiceImg from "../../images/juice.jpg";
 import makeupImg from "../../images/makeup.jpg";
+import cameraImg from "../../images/camera.jpg";
+import dietImg from "../../images/diet.jpg";
+
+
 const Home = () => {
   return (
     <div className="">
@@ -18,28 +26,34 @@ const Home = () => {
       </div>
 
       <div className=" m-8 grid md:grid-cols-4 grid-cols-2 gap-8 items-center justify-items-center ">
-        <ImageCard imgSrc={milkImg}>
+        <ImageCard imgSrc={saleImg}>
           <h1 className="text-xl font-bold mb-2">lorem ipsun</h1>
           <p className="">Lorem ipsum dolor sit dolorum!</p>
           {/* <div class="space-x-4 mt-4"></div> */}
         </ImageCard>
-        <ImageCard imgSrc={electronicsImg}>
+        <ImageCard imgSrc={mobileImg}>
           <h1 className="text-xl font-bold mb-2">lorem ipsun</h1>
           <p className="">Lorem ipsum dolor sit dolorum!</p>
           {/* <div class="space-x-4 mt-4"></div> */}
         </ImageCard>
-        <ImageCard imgSrc={laptopImg}>
+        <ImageCard imgSrc={sweetsImg}>
           <h1 className="text-xl font-bold mb-2">lorem ipsun</h1>
           <p className="">Lorem ipsum dolor sit dolorum!</p>
           {/* <div class="space-x-4 mt-4"></div> */}
         </ImageCard>
-        <ImageCard imgSrc={makeupImg}>
+        <ImageCard imgSrc={marketImg}>
           <h1 className="text-xl font-bold mb-2">lorem ipsun</h1>
           <p className="">Lorem ipsum dolor sit dolorum!</p>
           {/* <div class="space-x-4 mt-4"></div> */}
         </ImageCard>
       </div>
 
+      <div className="m-8 grid md:grid-cols-4 grid-cols-2 gap-8 items-center justify-items-center">
+        <ProductCard imgSrc={juiceImg} />
+        <ProductCard imgSrc={makeupImg} />
+        <ProductCard imgSrc={cameraImg} />
+        <ProductCard imgSrc={dietImg} />
+      </div>
       <div className="hero block">
         <div className="container">
           <h1 className="font-bold text-6xl m-6">Welcome to our website</h1>
