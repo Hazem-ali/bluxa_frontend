@@ -54,9 +54,9 @@ const Navbar = () => {
               className="flex flex-col justify-around mx-2 w-7 h-7 cursor-pointer"
               onClick={toggleMenu}
             >
-              <div className="bar"></div>
-              <div className="bar"></div>
-              <div className="bar"></div>
+              <div className="bar bg-[#dda046]"></div>
+              <div className="bar bg-[#dda046]"></div>
+              <div className="bar bg-[#dda046]"></div>
             </span>
           </div>
 
