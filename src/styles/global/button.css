@@ -8,3 +8,6 @@
 .bg-comp {
     @apply bg-[#f4a7a7] hover:bg-[#ea554b] hover:text-white ;
 }
+.bg-comp-brown {
+    @apply bg-[#dda046] hover:bg-[#a7532d] hover:text-white ;
+}
