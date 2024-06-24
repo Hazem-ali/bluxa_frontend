@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./home.css";
 
 import saleImg from "../../images/sale.jpg";
-import mobileImg from "../../images/mobile.jpg";
+import watchImg from "../../images/watch.jpg";
 import sweetsImg from "../../images/sweets.jpg";
-import pinkImg from "../../images/pink.jpg";
+import laptopImg from "../../images/laptop.jpg";
 import juiceImg from "../../images/juice.jpg";
 import makeupImg from "../../images/makeup.jpg";
 import cameraImg from "../../images/camera.jpg";
@@ -27,10 +27,10 @@ const Home = () => {
       },
       {
         id: 2,
-        imgSrc: mobileImg,
-        title: "Accessories",
+        imgSrc: watchImg,
+        title: "Fashion",
         description:
-          "Find out our latest accessories for an easy life",
+          "Find out our latest fashion collections",
       },
       {
         id: 3,
@@ -41,7 +41,7 @@ const Home = () => {
       },
       {
         id: 4,
-        imgSrc: pinkImg,
+        imgSrc: laptopImg,
         title: "Electronics",
         description:
           "Latest electronic devices are here!",
