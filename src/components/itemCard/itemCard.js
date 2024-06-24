@@ -1,5 +1,6 @@
 import React from "react";
 import Like from "../../common/like";
+import '../../styles/global/button.css'
 const ItemCard = ({ item, onLike }) => {
   const { imgSrc, brand, title, price, old_price, liked } = item;
 
@@ -9,7 +10,7 @@ const ItemCard = ({ item, onLike }) => {
     backgroundPosition: "center",
   };
   return (
-    <div className="rounded-2xl max-w-full overflow-hidden bg-white shadow-md ">
+    <div className="rounded-2xl w-full  overflow-hidden bg-white shadow-md ">
       <div className="">
         {/* Image */}
         <a href="">
@@ -28,8 +29,8 @@ const ItemCard = ({ item, onLike }) => {
               <p className="text-lg font-semibold my-3">${price}</p>
 
               {old_price && (
-                <del>
-                  <p className="text-sm text-gray-600 ml-2">${old_price}</p>
+                <del className="text-red-600">
+                  <p className="text-sm ml-2">${old_price}</p>
                 </del>
               )}
             </div>
@@ -37,6 +38,7 @@ const ItemCard = ({ item, onLike }) => {
               <Like liked={liked} onLikeToggle={onLike} />
             </div>
           </div>
+          <button className="w-full rounded-xl transition-all hover:shadow-lg hover:scale-105 duration-300 py-2 font-bold bg-comp">Add to cart</button>
         </div>
       </div>
     </div>

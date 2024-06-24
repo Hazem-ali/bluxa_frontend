@@ -4,7 +4,7 @@ import "./home.css";
 import saleImg from "../../images/sale.jpg";
 import mobileImg from "../../images/mobile.jpg";
 import sweetsImg from "../../images/sweets.jpg";
-import marketImg from "../../images/market.jpg";
+import pinkImg from "../../images/pink.jpg";
 import juiceImg from "../../images/juice.jpg";
 import makeupImg from "../../images/makeup.jpg";
 import cameraImg from "../../images/camera.jpg";
@@ -21,30 +21,30 @@ const Home = () => {
       {
         id: 1,
         imgSrc: saleImg,
-        title: "lorem ipsum",
+        title: "Sale",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, quibusdam sed tenetur odit temporibus mollitia earum tempore, laborum eum quidem velit ipsum. Mollitia dolor provident necessitatibus neque nesciunt omnis.",
+          "Have a look to our huge sale on all items",
       },
       {
         id: 2,
         imgSrc: mobileImg,
-        title: "lorem ipsum",
+        title: "Accessories",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, quibusdam sed tenetur odit temporibus mollitia earum tempore, laborum eum quidem velit ipsum. Mollitia dolor provident necessitatibus neque nesciunt omnis.",
+          "Find out our latest accessories for an easy life",
       },
       {
         id: 3,
         imgSrc: sweetsImg,
-        title: "lorem ipsum",
+        title: "Sweets",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, quibusdam sed tenetur odit temporibus mollitia earum tempore, laborum eum quidem velit ipsum. Mollitia dolor provident necessitatibus neque nesciunt omnis.",
+          "Explore our new chocolate and sweets",
       },
       {
         id: 4,
-        imgSrc: marketImg,
-        title: "lorem ipsum",
+        imgSrc: pinkImg,
+        title: "Electronics",
         description:
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus sint, quibusdam sed tenetur odit temporibus mollitia earum tempore, laborum eum quidem velit ipsum. Mollitia dolor provident necessitatibus neque nesciunt omnis.",
+          "Latest electronic devices are here!",
       },
     ]);
     setItems([
@@ -78,8 +78,8 @@ const Home = () => {
       {
         id: 4,
         imgSrc: dietImg,
-        title: "Diet Shawerma",
-        brand: "Abo 3ammar",
+        title: "Diet food",
+        brand: "Cinnabon",
         price: "149",
         old_price: "249",
         liked: false,
