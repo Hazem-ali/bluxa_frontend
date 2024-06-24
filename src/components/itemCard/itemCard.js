@@ -1,8 +1,8 @@
 import React from "react";
 import Like from "../../common/like";
-import '../../styles/global/button.css'
-const ItemCard = ({ item, onLike }) => {
-  const { imgSrc, brand, title, price, old_price, liked } = item;
+import "../../styles/global/button.css";
+const ItemCard = ({ item, onLike, onAddToCart }) => {
+  const { imgSrc, brand, title, price, old_price, liked, currency } = item;
 
   const divStyle = {
     backgroundImage: `url(${imgSrc})`,
@@ -13,9 +13,9 @@ const ItemCard = ({ item, onLike }) => {
     <div className="rounded-2xl w-full  overflow-hidden bg-white shadow-md ">
       <div className="">
         {/* Image */}
-        <a href="">
-          <div className=" h-48" style={divStyle}></div>
-        </a>
+
+        {/* todo image carousel */}
+        <div className="h-48 cursor-pointer" style={divStyle}></div>
 
         {/* Details */}
         <div className="flex flex-col px-4 py-3 w-full ">
@@ -26,11 +26,15 @@ const ItemCard = ({ item, onLike }) => {
 
           <div className="flex items-center justify-between ">
             <div className="flex items-center">
-              <p className="text-lg font-semibold my-3">${price}</p>
+              <p className="text-lg font-semibold my-3">
+                {currency || "$"} {price}
+              </p>
 
               {old_price && (
                 <del className="text-red-600">
-                  <p className="text-sm ml-2">${old_price}</p>
+                  <p className="text-sm ml-2">
+                    {currency || "$"} {old_price}
+                  </p>
                 </del>
               )}
             </div>
@@ -38,7 +42,12 @@ const ItemCard = ({ item, onLike }) => {
               <Like liked={liked} onLikeToggle={onLike} />
             </div>
           </div>
-          <button className="w-full rounded-xl transition-all hover:shadow-lg hover:scale-105 duration-300 py-2 font-bold bg-comp">Add to cart</button>
+          <button
+            className="w-full rounded-xl transition-all hover:shadow-lg hover:scale-105 duration-300 py-2 font-bold bg-comp"
+            onClick={onAddToCart}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
     </div>

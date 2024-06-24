@@ -22,29 +22,25 @@ const Home = () => {
         id: 1,
         imgSrc: saleImg,
         title: "Sale",
-        description:
-          "Have a look to our huge sale on all items",
+        description: "Have a look to our huge sale on all items",
       },
       {
         id: 2,
         imgSrc: watchImg,
         title: "Fashion",
-        description:
-          "Find out our latest fashion collections",
+        description: "Find out our latest fashion collections",
       },
       {
         id: 3,
         imgSrc: sweetsImg,
         title: "Sweets",
-        description:
-          "Explore our new chocolate and sweets",
+        description: "Explore our new chocolate and sweets",
       },
       {
         id: 4,
         imgSrc: laptopImg,
         title: "Electronics",
-        description:
-          "Latest electronic devices are here!",
+        description: "Latest electronic devices are here!",
       },
     ]);
     setItems([
@@ -92,7 +88,12 @@ const Home = () => {
     const index = newItems.indexOf(item);
     newItems[index].liked = !newItems[index].liked;
     setItems(newItems);
-    console.log(items[index])
+    console.log(items[index]);
+  };
+
+  const onAddToCartHandler = (item) => {
+    console.log("Added to cart => ", item.title);
+    return;
   };
 
   return (
@@ -108,7 +109,11 @@ const Home = () => {
 
       <ImageCards cards={cards} />
 
-      <ItemCards items={items} onLike={likeHandler} />
+      <ItemCards
+        items={items}
+        onLike={likeHandler}
+        onAddToCart={onAddToCartHandler}
+      />
 
       <div className="hero block">
         <div className="container">

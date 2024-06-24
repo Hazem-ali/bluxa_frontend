@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/global/input.css";
-import "../../styles/global/button.css";
+import "../styles/global/input.css";
+import "../styles/global/button.css";
 import { useLocation } from "react-router-dom";
 const Login = () => {
   const location = useLocation();
   useEffect(() => {
     console.log(location);
-  }, []);
+  }, [location]);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
 

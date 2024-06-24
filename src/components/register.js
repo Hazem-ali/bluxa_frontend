@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-import Route from "react-router-dom";
-import "../../styles/global/input.css";
-import "../../styles/global/button.css";
+import React from "react";
+import "../styles/global/input.css";
+import "../styles/global/button.css";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {

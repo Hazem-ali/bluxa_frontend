@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import cd_image from "../../images/cd.png";
-import "./navbar.css";
-import "../../styles/global/button.css";
+import React, { useCallback, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Backdrop from "../backdrop";
-import useScrollPosition from "../../components/hooks/useScrollPosition";
+import "../styles/global/button.css";
+import Backdrop from "./backdrop";
+import Hamburger from "./hamburger";
+import cd_image from "../images/cd.png";
+import useScrollPosition from "../components/hooks/useScrollPosition";
 
 const SCROLL_THRESHOLD = 300;
 
@@ -15,17 +15,18 @@ const Navbar = () => {
   const scrollPosition = useScrollPosition();
   const navigate = useNavigate();
 
-
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isScrolledOverThreshold = (threshold) => {
-    return scrollPosition > threshold;
-  };
+  const isScrolledOverThreshold = useCallback(
+    (threshold) => {
+      return scrollPosition > threshold;
+    },
+    [scrollPosition]
+  );
 
-  const modifyNavOnScroll = () => {
+  const modifyNavOnScroll = useCallback(() => {
     if (isScrolledOverThreshold(SCROLL_THRESHOLD)) {
       // Add your action here
       setNavScrollTheme("bg-white text-black");
@@ -35,11 +36,11 @@ const Navbar = () => {
       setNavHeight("h-20");
     }
     return;
-  };
+  }, [isScrolledOverThreshold]);
 
   useEffect(() => {
     modifyNavOnScroll();
-  }, [scrollPosition]);
+  }, [modifyNavOnScroll]);
 
   return (
     <header className="">
@@ -49,16 +50,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-center">
           {/* hamburger menu */}
-          <div className="md:hidden">
-            <span
-              className="flex flex-col justify-around mx-2 w-7 h-7 cursor-pointer"
-              onClick={toggleMenu}
-            >
-              <div className="bar bg-[#dda046]"></div>
-              <div className="bar bg-[#dda046]"></div>
-              <div className="bar bg-[#dda046]"></div>
-            </span>
-          </div>
+          <Hamburger onClick={toggleMenu} />
 
           {/* icon */}
           <div>
